@@ -1,7 +1,7 @@
-# Личный проект «Мишка» 
+# Личный проект «Мишка»
 
-* Студент: [Евгений Кулаков](https://up.htmlacademy.ru/adaptive/23/user/1014749).
-* Наставник: `Неизвестно`.
+- Студент: [Евгений Кулаков](https://up.htmlacademy.ru/adaptive/23/user/1014749).
+- Наставник: [Лиза Пак](https://up.htmlacademy.ru/adaptive/23/user/5608).
 
 ---
 
