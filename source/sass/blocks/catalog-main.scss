@@ -1,0 +1,13 @@
+.catalog-main__title {
+  @include font(27px, 30px, 700, $black);
+
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 70px $mobile-padding 70px $mobile-padding;
+  background-color: $grey--light;
+  text-align: center;
+}
+
+.catalog-main__production {
+  margin-bottom: 58px;
+}

@@ -1,0 +1,69 @@
+.product {
+  padding-bottom: 42px;
+  background-image: url("../../img/zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+}
+
+.product__container {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+}
+
+.product__title {
+  @include font(25px, 30px, 700, $black);
+
+  margin-bottom: 5px;
+}
+
+.product__heading {
+  @include font(17px, 20px, 700, $green);
+
+  margin-top: 5px;
+}
+
+.product__text {
+  @include font(15px, 24px, 400, $grey--dark);
+}
+
+.product__properties {
+  @include font(15px, 20px, 400, $grey--dark);
+
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-bottom: 28px;
+}
+
+.product__price {
+  @include font(17px, 24px, 700, $grey--dark);
+
+  text-align: center;
+}
+
+.product__order {
+  margin: 0 auto;
+  width: 260px;
+}
+
+.product__properties tr {
+  border-bottom: 1px solid $grey;
+}
+
+.product__properties td {
+  padding: 9px 0 10px 0;
+  word-wrap: break-word;
+}
+
+.product__properties td:first-child {
+  width: 40%;
+}
+
+.product__description {
+  max-width: 380px;
+}
+
+.product__image {
+  display: block;
+  background-color: $grey;
+}

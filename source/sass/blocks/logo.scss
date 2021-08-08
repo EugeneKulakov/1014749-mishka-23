@@ -1,0 +1,28 @@
+.logo {
+  display: block;
+  width: 86px;
+  height: 35px;
+
+  @media (min-width: 700px) {
+    width: 113px;
+    height: 46px;
+  }
+
+  @media (min-width: 1150px) {
+    width: 149px;
+    height: 72px;
+  }
+}
+
+.logo__image {
+  fill: $black;
+}
+
+.logo[href]:hover .logo__image,
+.logo[href]:focus .logo__image {
+  fill: $black--opacity-06;
+}
+
+.logo[href]:active .logo__image {
+  fill: $black--opacity-03;
+}

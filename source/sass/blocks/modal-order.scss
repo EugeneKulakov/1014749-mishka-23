@@ -1,0 +1,85 @@
+.modal-order {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  background-color: rgba($white, 0.9);
+  z-index: 9;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.modal-order__container {
+  width: 320px;
+  margin: auto;
+  background-color: $white;
+  border-top: 1px solid $grey--darken;
+  border-bottom: 1px solid $grey--darken;
+  box-shadow: 0 5px 10px $black--additional;
+  padding: 36px $mobile-padding 46px $mobile-padding;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.modal-order__title {
+  margin-top: 0;
+  text-transform: uppercase;
+  width: 150px;
+
+  @include font(25px, 30px, 700, $black);
+}
+
+.modal-order__text {
+  @include font(15px, 30px, 400, $grey--dark);
+}
+
+.modal-order__list {
+  @include reset-list;
+
+  margin-bottom: 31px;
+  display: flex;
+  width: 260px;
+  justify-content: space-between;
+}
+
+.modal-order__radio {
+  display: block;
+  width: 82px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 2px solid rgba($grey--dark, 0.1);
+  text-align: center;
+  cursor: pointer;
+
+  @include font(17px, 16px, 700, $grey--dark);
+
+  &:hover {
+    border-color: rgba($grey--dark, 0.3);
+  }
+}
+
+.modal-order__input:checked + .modal-order__radio {
+  border-color: $green;
+}
+
+.modal-order__input:focus + .modal-order__radio {
+  border-color: rgba($grey--dark, 0.3);
+}
+
+.modal-order__button {
+  @include font(17px, 16px, 700, $white);
+
+  background-color: $green;
+  width: 100%;
+  border: none;
+  padding: 17px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

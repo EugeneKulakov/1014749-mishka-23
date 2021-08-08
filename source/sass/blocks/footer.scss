@@ -1,0 +1,15 @@
+.footer {
+  background-color: $grey--light;
+  padding-top: 25px;
+  padding-bottom: 22px;
+}
+
+.footer__container {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+  margin: 0 auto;
+}
+
+.footer__copyright {
+  margin: 10px auto 0 auto;
+}

@@ -1,0 +1,17 @@
+.toggle {
+  width: 30px;
+  height: 24px;
+  background-image: url("../../img/menu-burger.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 14px;
+  background-position: 5px 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--cross {
+    background-image: url("../../img/menu-close.svg");
+    background-size: 21px 20px;
+    background-position: 5px 2px;
+  }
+}
