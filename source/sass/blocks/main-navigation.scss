@@ -1,17 +1,14 @@
 .main-navigation {
   width: 100%;
+  padding-top: 21px;
   background-color: $white;
-  display: none;
-
-  &--opened {
-    display: block;
-  }
 
   @media (min-width: 700px) {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: min-content min-content;
+    padding-top: 0;
 
     &::before {
       content: "";
@@ -32,6 +29,18 @@
 
 .main-navigation__menu {
   @include reset-list;
+
+  &:first-of-type {
+    border-top: 1px solid $grey;
+
+    @media (min-width: 700px) {
+      border: none;
+    }
+  }
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-navigation__link {
@@ -152,5 +161,28 @@
   @media (min-width: 1150px) {
     grid-column: 3 / -1;
     grid-row: 1 / 2;
+  }
+}
+
+.main-navigation__logo {
+  margin: 0 auto 22px auto;
+
+  @media (min-width: 700px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+    margin: 0 0 0 48px;
+  }
+
+  @media (min-width: 1150px) {
+    grid-column: 2 / 3;
+    margin: 0;
+    justify-self: center;
+  }
+}
+
+.main-navigation__logo svg {
+  @media (min-width: 1150px) {
+    margin-top: 10px;
   }
 }
