@@ -140,7 +140,7 @@
 }
 
 .main-form__input:checked + .main-form__checkbox::after {
-  background-image: url("../../img/tick.svg");
+  background-image: url("../img/tick.svg");
 }
 
 .main-form__input:disabled + .main-form__radio,
