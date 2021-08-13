@@ -1,0 +1,59 @@
+.about {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+}
+
+.about__title {
+  @include font(25px, 30px, 700, $black);
+}
+
+.about__list {
+  @include reset-list;
+}
+
+.about__item {
+  @include font(17px, 20px, 700, $black);
+
+  padding-top: 62px;
+  background-repeat: no-repeat;
+}
+
+.about__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.about__item--eco {
+  background-image: url("../img/icon-eco.svg");
+  background-size: 33px 38px;
+  background-position: 5px 1px;
+}
+
+.about__item--scandinavian {
+  background-image: url("../img/icon-style.svg");
+  background-size: 47px 27px;
+  background-position: 5px 1px;
+}
+
+.about__item--likes {
+  background-image: url("../img/icon-like.svg");
+  background-size: 34px 27px;
+  background-position: 5px 1px;
+}
+
+.about__item--handmade {
+  background-image: url("../img/icon-handmade.svg");
+  background-size: 35px 34px;
+  background-position: 5px 1px;
+}
+
+.about__item--support {
+  background-image: url("../img/icon-support.svg");
+  background-size: 55px 23px;
+  background-position: 5px 1px;
+}
+
+.about__item--giftbox {
+  background-image: url("../img/icon-giftbox.svg");
+  background-size: 33px 32px;
+  background-position: 5px 1px;
+}

@@ -1,0 +1,72 @@
+.card {
+  width: 260px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px $black--opacity-01;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px $black--opacity-01;
+  }
+}
+
+.card__link {
+  @include font(17px, 24px, 700, $black);
+
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $black--opacity-06;
+  }
+
+  &:active {
+    color: $black--opacity-03;
+  }
+}
+
+.card__properties {
+  @include font(13px, 30px, 400, $grey--dark);
+}
+
+.card__price {
+  @include font(15px, 24px, 700, $black);
+}
+
+.card__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $grey;
+}
+
+.card__info-wrap {
+  padding-right: 28px;
+  padding-left: 28px;
+  border: 1px solid $grey;
+}
+
+.card__img-link img {
+  display: block;
+  background-color: $grey;
+}
+
+.card__cart {
+  position: relative;
+  right: -4px;
+  padding: 7px;
+}
+
+.card__cart svg {
+  fill: $black--opacity-02;
+}
+
+.card__cart:hover svg,
+.card__cart:focus svg {
+  fill: $green;
+}
+
+.card__cart:active svg {
+  fill: $green--opacity-03;
+}

@@ -1,0 +1,29 @@
+.header {
+  position: relative;
+  min-height: 80px;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+
+  @media (min-width: 700px) and (max-width: 1150px) {
+    border: none;
+  }
+}
+
+.header__toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  @media (min-width: 700px) {
+    display: none;
+  }
+}
+
+.header__navigation {
+  position: absolute;
+  z-index: 2;
+
+  @media (min-width: 700px) {
+    position: static;
+  }
+}

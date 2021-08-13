@@ -1,0 +1,61 @@
+.social {
+  @include reset-list;
+
+  margin: 0 0 auto 0;
+  padding: 0 0 10px 0;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: $grey--darker;
+  bottom: 0;
+  left: 0;
+}
+
+.social__link {
+  display: block;
+  box-sizing: content-box;
+  padding: 10px;
+
+  &--instagram {
+    width: 22px;
+    height: 22px;
+    margin-top: 3px;
+  }
+
+  &--facebook {
+    width: 15px;
+    height: 28px;
+  }
+
+  &--twitter {
+    width: 23px;
+    height: 20px;
+    margin-top: 3px;
+  }
+}
+
+.social__link svg {
+  fill: $grey--deep;
+}
+
+.social__link:hover svg,
+.social__link:focus svg {
+  fill: $green--darker;
+}
+
+.social__link:active svg {
+  opacity: 0.3;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 21px;
+  margin-bottom: 15px;
+}

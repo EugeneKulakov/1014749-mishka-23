@@ -1,0 +1,11 @@
+.copyright {
+  @include font(19px, 18px, 700, $black);
+
+  width: 210px;
+  display: flex;
+  align-items: center;
+}
+
+.copyright__logo {
+  margin-left: 27px;
+}

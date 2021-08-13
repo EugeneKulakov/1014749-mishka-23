@@ -1,0 +1,12 @@
+.catalog {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+}
+
+.catalog__list {
+  @include reset-list;
+}
+
+.catalog__item {
+  margin: 0 auto 30px auto;
+}

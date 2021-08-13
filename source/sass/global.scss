@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  min-width: 320px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  @include font(16px, 24px, 400, $grey--dark);
+}
+
+img {
+  max-width: 100%;
+}
