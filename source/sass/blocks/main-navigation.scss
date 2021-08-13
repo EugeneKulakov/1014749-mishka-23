@@ -35,7 +35,6 @@
 }
 
 .main-navigation__link {
-  position: relative;
   display: block;
 
   @include font(17px, 24px, 700, $black);
@@ -79,15 +78,9 @@
   }
 }
 
-.main-navigation__link--cart .main-navigation__icon {
-  @media (min-width: 700px) {
-    left: 27px;
-  }
-}
-
 .main-navigation__link--search .main-navigation__icon {
   @media (min-width: 700px) {
-    position: static;
+    margin: 0;
   }
 }
 
@@ -107,10 +100,9 @@
 }
 
 .main-navigation__icon {
-  position: absolute;
-  left: calc(((100vw - 320px) * 0.5) + 24px);
   fill: $black--opacity-02;
-  margin-top: 2px;
+  margin-right: 10px;
+  margin-left: -31px;
 }
 
 .main-navigation__menu--links {
