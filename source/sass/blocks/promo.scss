@@ -13,10 +13,21 @@
   text-align: center;
   padding-left: $mobile-padding;
   padding-right: $mobile-padding;
+
+  @media (min-width: $tablet) {
+    @include font(43px, 50px, 700, $black);
+  }
 }
 
 .promo__list {
   @include reset-list;
+
+  @media (min-width: $tablet) {
+    width: 86.99%;
+    max-width: $desktop - 100px;
+    margin: 0 auto;
+    display: flex;
+  }
 }
 
 .promo__link {
@@ -24,6 +35,7 @@
   display: block;
   text-decoration: none;
   padding: 24px 190px 31px 30px;
+  height: 100%;
 
   @include font(19px, 24px, 700, $white);
 
@@ -44,6 +56,11 @@
     left: 0;
     opacity: 0.5;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -83,4 +100,10 @@
   bottom: 40%;
   left: calc(50% - 133px);
   background-color: $grey;
+}
+
+.promo__item {
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
 }

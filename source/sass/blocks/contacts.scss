@@ -2,20 +2,53 @@
   @include font(14px, 30px, 400, $grey--dark);
 
   padding-top: 10px;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    width: $desktop;
+    margin: 0 auto;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
 }
 
 .contacts__container {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
   padding-left: $mobile-padding;
   padding-right: $mobile-padding;
-  max-width: 360px;
   margin: 0 auto 50px auto;
+
+  @media (min-width: $tablet) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+    max-width: $tablet + 100px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 15px 0 0;
+    margin: 0 0 52px 0;
+    width: 523px;
+    max-width: none;
+    padding-left: 175px;
+    flex-direction: column;
+  }
 }
 
 .contacts__button {
   margin: 0 auto;
   width: 260px;
+
+  @media (min-width: $tablet) {
+    width: 230px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 175px;
+    margin-top: -52px;
+  }
 }
 
 .contacts__image {
@@ -23,24 +56,55 @@
   margin: 0 auto 42px auto;
   object-fit: cover;
   background-color: $antiquewhite;
+
+  @media (min-width: $desktop) {
+    width: 527px;
+    height: 457px;
+  }
 }
 
 .contacts__title {
   @include font(25px, 30px, 700, $black);
 
   width: 100%;
+  word-break: break-word;
+
+  @media (min-width: $tablet) {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .contacts__email,
 .contacts__text {
   width: 77px;
   margin: 0 0 10px 0;
+
+  @media (min-width: $tablet) {
+    font-size: 17px;
+  }
 }
 
 .contacts__link,
 .contacts__address {
   margin: 0 0 10px 0;
   width: 183px;
+
+  @media (min-width: $tablet) {
+    font-size: 17px;
+  }
+}
+
+.contacts__address {
+  @media (min-width: $tablet) {
+    width: 250px;
+  }
 }
 
 .contacts__link {
@@ -72,5 +136,19 @@
     &::before {
       opacity: 0.1;
     }
+  }
+}
+
+.contacts__wrap {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
   }
 }

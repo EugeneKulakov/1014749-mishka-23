@@ -26,6 +26,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    width: 566px;
+    // padding-left: 108px;
+    // padding-right: 108px;
+  }
 }
 
 .modal-order__title {
@@ -34,10 +40,21 @@
   width: 150px;
 
   @include font(25px, 30px, 700, $black);
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 57px;
+    margin-bottom: 0;
+    width: auto;
+  }
 }
 
 .modal-order__text {
   @include font(15px, 30px, 400, $grey--dark);
+
+  @media (min-width: $tablet) {
+    font-size: 17px;
+  }
 }
 
 .modal-order__list {
@@ -47,6 +64,10 @@
   display: flex;
   width: 260px;
   justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    width: 350px;
+  }
 }
 
 .modal-order__radio {
@@ -62,6 +83,10 @@
 
   &:hover {
     border-color: rgba($grey--dark, 0.3);
+  }
+
+  @media (min-width: $tablet) {
+    width: 112px;
   }
 }
 

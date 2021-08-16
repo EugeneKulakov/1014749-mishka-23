@@ -55,11 +55,8 @@
           </li>
         </ul>
         <ul class="main-navigation__menu main-navigation__menu--services">
-          <li class="main-navigation__item">
-            <a
-              class="main-navigation__link main-navigation__link--search"
-              href="#"
-            >
+          <li class="main-navigation__item main-navigation__item--search">
+            <a class="main-navigation__link" href="#">
               <svg
                 class="main-navigation__icon"
                 width="18"
@@ -73,11 +70,8 @@
               <span>Поиск по сайту</span></a
             >
           </li>
-          <li class="main-navigation__item">
-            <a
-              class="main-navigation__link main-navigation__link--cart"
-              href="#"
-            >
+          <li class="main-navigation__item main-navigation__item--cart">
+            <a class="main-navigation__link" href="#">
               <svg
                 class="main-navigation__icon"
                 width="21"
@@ -98,7 +92,7 @@
       <h1 class="visually-hidden">
         Магазин игрушек и предметов интерьера ручной работы
       </h1>
-      <section class="promo">
+      <section class="main__promo promo">
         <div class="promo__container">
           <h2 class="promo__title">
             Милые штуки ручной<br />
@@ -114,12 +108,14 @@
           <ul class="promo__list">
             <li class="promo__item">
               <a class="promo__link promo__link--interior" href="interior.html"
-                >Предметы интерьера</a
+                >Предметы<br />
+                интерьера</a
               >
             </li>
             <li class="promo__item">
               <a class="promo__link promo__link--toys" href="toys.html"
-                >Детские игрушки</a
+                >Детские<br />
+                игрушки</a
               >
             </li>
           </ul>
@@ -160,7 +156,7 @@
           <a class="product__order button" href="#">Заказать</a>
         </div>
       </section>
-      <section class="about">
+      <section class="main__about about">
         <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list">
           <li class="about__item about__item--eco">
@@ -218,15 +214,19 @@
       <section class="main__contacts contacts">
         <div class="contacts__container">
           <h2 class="contacts__title">Контакты</h2>
-          <p class="contacts__email">e-mail:</p>
-          <a class="contacts__link" href="mailto:info@mimimishkashop.ru"
-            >info@mimimishkashop.ru</a
-          >
-          <p class="contacts__text">адрес:</p>
-          <p class="contacts__address">
-            г. Санкт-Петербург,<br />
-            ул. Большая&nbsp;Конюшенная, д.&nbsp;19/8,&nbsp;офис&nbsp;101
-          </p>
+          <div class="contacts__wrap">
+            <p class="contacts__email">e-mail:</p>
+            <a class="contacts__link" href="mailto:info@mimimishkashop.ru"
+              >info@mimimishkashop.ru</a
+            >
+          </div>
+          <div class="contacts__wrap">
+            <p class="contacts__text">адрес:</p>
+            <p class="contacts__address">
+              г. Санкт-Петербург,<br />
+              ул. Большая&nbsp;Конюшенная д.&nbsp;19/8,&nbsp;офис&nbsp;101
+            </p>
+          </div>
         </div>
         <img
           class="contacts__image"

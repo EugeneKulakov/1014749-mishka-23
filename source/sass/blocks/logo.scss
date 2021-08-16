@@ -3,12 +3,12 @@
   width: 86px;
   height: 35px;
 
-  @media (min-width: 700px) {
+  @media (min-width: $tablet) {
     width: 113px;
     height: 46px;
   }
 
-  @media (min-width: 1150px) {
+  @media (min-width: $desktop) {
     width: 149px;
     height: 72px;
   }

@@ -1,3 +1,27 @@
 .main__contacts {
   margin-bottom: 39px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 105px;
+  }
+}
+
+.main__promo {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+  }
+}
+
+.main__about {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+  }
 }

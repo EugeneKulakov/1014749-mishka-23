@@ -2,14 +2,31 @@
   background-color: $grey--light;
   padding-top: 25px;
   padding-bottom: 22px;
+
+  @media (min-width: $tablet) {
+    padding-top: 55px;
+    padding-bottom: 15px;
+  }
 }
 
 .footer__container {
   padding-left: $mobile-padding;
   padding-right: $mobile-padding;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
 }
 
 .footer__copyright {
   margin: 10px auto 0 auto;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
 }
