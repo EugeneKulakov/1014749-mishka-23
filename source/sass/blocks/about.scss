@@ -10,9 +10,8 @@
   }
 
   @media (min-width: $desktop) {
-    padding-left: 175px;
-    padding-right: 175px;
-    max-width: $desktop - 100px;
+    padding: 0;
+    width: 700px;
   }
 }
 
