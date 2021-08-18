@@ -20,7 +20,7 @@
 }
 
 .header__navigation {
-  position: absolute;
+  position: static;
   z-index: 2;
 
   @media (min-width: $tablet) {
