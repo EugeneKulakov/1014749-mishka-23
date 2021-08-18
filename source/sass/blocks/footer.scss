@@ -27,3 +27,26 @@
     margin: 0;
   }
 }
+
+.footer__logo {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    width: 102px;
+    height: 35px;
+  }
+}
+
+.footer__logo svg {
+  fill: $black;
+}
+
+.footer__logo[href]:hover svg,
+.footer__logo[href]:focus svg {
+  fill: $green--darker;
+}
+
+.footer__logo[href]:active svg {
+  opacity: 0.3;
+}
