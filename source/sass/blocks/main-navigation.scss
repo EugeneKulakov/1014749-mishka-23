@@ -20,10 +20,6 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: 450px 1fr 450px;
-
-    &::before {
-      display: none;
-    }
   }
 }
 
@@ -141,10 +137,10 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 31px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     background-color: transparent;
+    padding: 0;
   }
 }
 
@@ -158,10 +154,32 @@
   }
 }
 
+.main-navigation__menu--links .main-navigation__item {
+  @media (min-width: $desktop) {
+    padding-top: 31px;
+    padding-bottom: 15px;
+  }
+}
+
 .main-navigation__menu--links .main-navigation__item:not(:last-child) {
   @media (min-width: $tablet) {
     margin-right: 39px;
-    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 72px;
+    padding-left: $tablet-padding;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      right: -36px;
+      background-color: $grey;
+    }
   }
 }
 
@@ -171,7 +189,7 @@
     grid-row: 1 / 2;
     display: flex;
     justify-content: flex-end;
-    padding-right: 50px;
+    padding-right: $tablet-padding;
   }
 
   @media (min-width: $desktop) {
