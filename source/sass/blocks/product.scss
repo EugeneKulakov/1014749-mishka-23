@@ -173,15 +173,17 @@
 .product__image {
   display: block;
   background-color: $grey;
+  margin: 0 auto;
 
   @media (min-width: $tablet) {
-    margin-top: 5px;
+    margin: 5px 0 0 0;
     line-height: 17px;
     grid-column: 3 / -1;
     grid-row: 2 / -1;
   }
 
   @media (min-width: $desktop) {
+    margin: 0;
     grid-column: 4 / -1;
     grid-row: 1 / -1;
   }
