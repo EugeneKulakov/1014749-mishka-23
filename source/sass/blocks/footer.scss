@@ -10,16 +10,13 @@
 }
 
 .footer__container {
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+  @include paddings;
   margin: 0 auto;
 
   @media (min-width: $tablet) {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding-left: $tablet-padding;
-    padding-right: $tablet-padding;
   }
 }
 

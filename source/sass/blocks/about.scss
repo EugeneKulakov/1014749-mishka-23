@@ -1,10 +1,7 @@
 .about {
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+  @include paddings;
 
   @media (min-width: $tablet) {
-    padding-left: $tablet-padding;
-    padding-right: $tablet-padding;
     max-width: $tablet + 90px;
     margin: 0 auto;
   }

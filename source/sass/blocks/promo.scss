@@ -11,8 +11,8 @@
   z-index: 1;
   margin-bottom: 120px;
   text-align: center;
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+
+  @include paddings;
 
   @media (min-width: $tablet) {
     @include font(43px, 50px, 700, $black);

@@ -3,11 +3,13 @@
   background-repeat: repeat-x;
   background-size: auto 6px;
   background-position: 8px bottom;
-  padding: 0 $mobile-padding 51px $mobile-padding;
+
+  @include paddings;
+
+  padding-top: 0;
+  padding-bottom: 51px;
 
   @media (min-width: $tablet) {
-    padding-left: $tablet-padding;
-    padding-right: $tablet-padding;
     background-size: auto 17px;
   }
 

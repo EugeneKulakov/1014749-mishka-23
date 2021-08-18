@@ -17,13 +17,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+
+  @include paddings;
+
   margin: 0 auto 50px auto;
 
   @media (min-width: $tablet) {
-    padding-left: $tablet-padding;
-    padding-right: $tablet-padding;
     max-width: $tablet + 100px;
   }
 
