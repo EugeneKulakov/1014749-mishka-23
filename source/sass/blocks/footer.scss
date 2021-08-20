@@ -12,7 +12,7 @@
 .footer__container {
   @include paddings;
   margin: 0 auto;
-  max-width: $footer-max-width;
+  max-width: $container-max-width;
 
   @media (min-width: $tablet) {
     display: flex;

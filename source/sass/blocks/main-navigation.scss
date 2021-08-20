@@ -1,7 +1,8 @@
 .main-navigation {
-  width: 100%;
   padding-top: 21px;
   background-color: $white;
+  max-width: $container-max-width;
+  margin: 0 auto;
 
   @media (min-width: $tablet) {
     height: 100%;
@@ -222,6 +223,7 @@
 }
 
 .main-navigation__note {
+  position: relative;
   display: none;
 
   @include font(15px, 24px, 400, $grey--dark);
@@ -246,6 +248,7 @@
   display: none;
 
   @media (min-width: $desktop) {
+    position: relative;
     display: flex;
     background-color: $grey--lighen;
     padding-left: $tablet-padding;
@@ -259,4 +262,25 @@
   &:not(:last-child) {
     margin-right: 62px;
   }
+}
+
+.main-navigation__menu--special::before,
+.main-navigation__note::after {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: calc(100% + 1px);
+  background-color: $grey--lighen;
+  top: -1px;
+  border-top: 1px solid $grey;
+}
+
+.main-navigation__menu--special::before {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.main-navigation__note::after {
+  right: 0;
+  transform: translateX(100%);
 }
