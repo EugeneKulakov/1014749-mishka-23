@@ -3,8 +3,10 @@
   min-height: 80px;
   border-top: 1px solid $grey;
   border-bottom: 1px solid $grey;
+  max-width: 100%;
+  overflow: hidden;
 
-  @media (min-width: 700px) and (max-width: 1150px) {
+  @media (min-width: $tablet) {
     border: none;
   }
 }
@@ -14,16 +16,16 @@
   top: 30px;
   right: 30px;
 
-  @media (min-width: 700px) {
+  @media (min-width: $tablet) {
     display: none;
   }
 }
 
 .header__navigation {
-  position: absolute;
+  position: static;
   z-index: 2;
 
-  @media (min-width: 700px) {
+  @media (min-width: $tablet) {
     position: static;
   }
 }

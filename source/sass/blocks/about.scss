@@ -1,14 +1,39 @@
 .about {
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+  @include paddings;
+
+  @media (min-width: $tablet) {
+    max-width: $tablet + 90px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    width: 700px;
+  }
 }
 
 .about__title {
   @include font(25px, 30px, 700, $black);
+
+  @media (min-width: $tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .about__list {
   @include reset-list;
+  max-width: $tablet;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .about__item {
@@ -16,6 +41,13 @@
 
   padding-top: 62px;
   background-repeat: no-repeat;
+  padding-right: 15px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 22px;
+    width: 50%;
+  }
 }
 
 .about__item:not(:last-child) {
@@ -26,34 +58,40 @@
   background-image: url("../img/icon-eco.svg");
   background-size: 33px 38px;
   background-position: 5px 1px;
+  order: 1;
 }
 
 .about__item--scandinavian {
   background-image: url("../img/icon-style.svg");
   background-size: 47px 27px;
   background-position: 5px 1px;
+  order: 3;
 }
 
 .about__item--likes {
   background-image: url("../img/icon-like.svg");
   background-size: 34px 27px;
   background-position: 5px 1px;
+  order: 5;
 }
 
 .about__item--handmade {
   background-image: url("../img/icon-handmade.svg");
   background-size: 35px 34px;
   background-position: 5px 1px;
+  order: 2;
 }
 
 .about__item--support {
   background-image: url("../img/icon-support.svg");
   background-size: 55px 23px;
   background-position: 5px 1px;
+  order: 4;
 }
 
 .about__item--giftbox {
   background-image: url("../img/icon-giftbox.svg");
   background-size: 33px 32px;
   background-position: 5px 1px;
+  order: 6;
 }

@@ -1,6 +1,5 @@
 .catalog {
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+  @include paddings;
 }
 
 .catalog__list {

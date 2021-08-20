@@ -1,7 +1,17 @@
+.promo {
+  background-color: $grey--lighen;
+}
+
 .promo__container {
   position: relative;
   padding-top: 73px;
-  background-color: $grey--lighen;
+  max-width: $container-max-width - 340px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
 }
 
 .promo__title {
@@ -11,19 +21,34 @@
   z-index: 1;
   margin-bottom: 120px;
   text-align: center;
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+
+  @include paddings;
+
+  @media (min-width: $tablet) {
+    @include font(43px, 50px, 700, $black);
+  }
+
+  @media (min-width: $desktop) {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .promo__list {
   @include reset-list;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .promo__link {
   position: relative;
   display: block;
   text-decoration: none;
-  padding: 24px 190px 31px 30px;
+  padding: 24px 52% 31px 30px;
+  height: 100%;
 
   @include font(19px, 24px, 700, $white);
 
@@ -44,6 +69,15 @@
     left: 0;
     opacity: 0.5;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 60%;
   }
 }
 
@@ -83,4 +117,10 @@
   bottom: 40%;
   left: calc(50% - 133px);
   background-color: $grey;
+}
+
+.promo__item {
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
 }

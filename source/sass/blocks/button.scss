@@ -18,4 +18,8 @@
   &:active {
     color: $white--opacity-03;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 17px;
+  }
 }

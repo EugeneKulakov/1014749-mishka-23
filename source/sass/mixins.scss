@@ -11,3 +11,13 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin paddings {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+
+  @media (min-width: $tablet) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
+}

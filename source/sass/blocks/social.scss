@@ -17,6 +17,10 @@
   background-color: $grey--darker;
   bottom: 0;
   left: 0;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .social__link {
