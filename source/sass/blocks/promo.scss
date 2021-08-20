@@ -1,7 +1,17 @@
+.promo {
+  background-color: $grey--lighen;
+}
+
 .promo__container {
   position: relative;
   padding-top: 73px;
-  background-color: $grey--lighen;
+  max-width: $container-max-width - 340px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
 }
 
 .promo__title {
@@ -17,15 +27,18 @@
   @media (min-width: $tablet) {
     @include font(43px, 50px, 700, $black);
   }
+
+  @media (min-width: $desktop) {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .promo__list {
   @include reset-list;
 
   @media (min-width: $tablet) {
-    width: 86.99%;
-    max-width: $desktop - 100px;
-    margin: 0 auto;
     display: flex;
   }
 }
@@ -61,6 +74,10 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 60%;
   }
 }
 
