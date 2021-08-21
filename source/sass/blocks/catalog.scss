@@ -1,11 +1,34 @@
 .catalog {
-  @include paddings;
+  @media (min-width: $desktop) {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: $desktop;
+    margin: 0 auto;
+  }
 }
 
 .catalog__list {
   @include reset-list;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: -51px;
+    padding-top: 70px;
+  }
 }
 
 .catalog__item {
   margin: 0 auto 30px auto;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 51px 51px 0;
+  }
 }

@@ -9,12 +9,24 @@
   &:active {
     box-shadow: 0 3px 5px $black--opacity-01;
   }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    width: 668px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 316px;
+    min-height: 659px;
+    flex-direction: column;
+  }
 }
 
 .card__link {
   @include font(17px, 24px, 700, $black);
 
   text-decoration: none;
+  word-break: break-word;
 
   &:hover,
   &:focus {
@@ -24,14 +36,27 @@
   &:active {
     color: $black--opacity-03;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
 }
 
 .card__properties {
   @include font(13px, 30px, 400, $grey--dark);
+
+  @media (min-width: $tablet) {
+    font-size: 15px;
+    margin-top: 5px;
+  }
 }
 
 .card__price {
   @include font(15px, 24px, 700, $black);
+
+  @media (min-width: $tablet) {
+    font-size: 17px;
+  }
 }
 
 .card__wrap {
@@ -39,17 +64,43 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid $grey;
+  margin-top: auto;
 }
 
 .card__info-wrap {
   padding-right: 28px;
   padding-left: 28px;
   border: 1px solid $grey;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 334px;
+    padding-left: 34px;
+    padding-right: 33px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 316px;
+    padding-left: 28px;
+    padding-right: 28px;
+    flex-grow: 1;
+  }
 }
 
 .card__img-link img {
   display: block;
   background-color: $grey;
+
+  @media (min-width: $tablet) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .card__cart {
@@ -69,4 +120,12 @@
 
 .card__cart:active svg {
   fill: $green--opacity-03;
+}
+
+.card__title {
+  margin-bottom: 0;
+
+  @media (min-width: $tablet) {
+    padding-right: 25px;
+  }
 }

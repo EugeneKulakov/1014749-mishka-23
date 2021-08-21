@@ -6,8 +6,26 @@
   padding: 70px $mobile-padding 70px $mobile-padding;
   background-color: $grey--light;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .catalog-main__production {
   margin-bottom: 58px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 105px;
+  }
 }

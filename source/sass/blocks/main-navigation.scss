@@ -301,3 +301,21 @@
   right: 0;
   transform: translateX(100%);
 }
+
+.main-navigation--inner .main-navigation__menu--special,
+.main-navigation--inner .main-navigation__menu--special::before,
+.main-navigation--inner .main-navigation__note,
+.main-navigation--inner .main-navigation__note::after {
+  background-color: $grey--light;
+}
+
+.main-navigation--inner .main-navigation__menu--links,
+.main-navigation--inner .main-navigation__menu--links::before {
+  @media (min-width: $tablet) {
+    background-color: $grey--light;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: transparent;
+  }
+}
