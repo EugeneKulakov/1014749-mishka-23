@@ -6,6 +6,16 @@
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: $grey--light;
+
+  @media (min-width: $tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .order-main__order-form {
