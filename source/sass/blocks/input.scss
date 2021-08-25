@@ -3,7 +3,7 @@
 
   border: none;
   border-bottom: 2px solid $black;
-  padding: 16px 5px 16px 0;
+  padding: 17px 5px 15px 0;
   width: 100%;
 
   &::placeholder {
@@ -26,4 +26,12 @@
 .input:disabled {
   pointer-events: none;
   opacity: 0.3;
+}
+
+.input--tel {
+  padding: 16px 5px 16px 0;
+
+  @media (min-width: $tablet) {
+    padding: 10px 10px 14px 18px;
+  }
 }

@@ -1,23 +1,32 @@
 .order-main__title {
   @include font(27px, 30px, 700, $black);
+  @include paddings;
 
   text-align: center;
   margin-top: 0;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-bottom: 4px;
+  padding-top: 72px;
+  padding-bottom: 74px;
   background-color: $grey--light;
 
   @media (min-width: $tablet) {
     font-size: 43px;
     line-height: 50px;
+    padding-top: 28px;
   }
 
   @media (min-width: $desktop) {
     font-size: 53px;
     line-height: 57px;
+    padding-top: 38px;
+    padding-bottom: 92px;
   }
 }
 
 .order-main__order-form {
   margin-bottom: 55px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
 }

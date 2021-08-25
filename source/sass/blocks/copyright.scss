@@ -7,5 +7,10 @@
 }
 
 .copyright__logo {
-  margin-left: 27px;
+  margin-left: 25px;
+  margin-top: 1px;
+
+  @media (min-width: $desktop) {
+    margin-left: 26px;
+  }
 }

@@ -1,23 +1,32 @@
+.radio {
+  position: relative;
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+}
+
 .radio__item {
   @include font(17px, 18px, 700, $black);
 
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 58px;
+  padding-left: 60px;
   cursor: pointer;
-  padding-top: 8px;
-  min-height: 42px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  word-break: break-word;
 
   @media (min-width: $tablet) {
-    padding: 16px 5px 16px 76px;
+    padding: 16px 5px 16px 77px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 79px;
   }
 
   &::before {
     content: "";
     position: absolute;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
     top: 0;
     left: 0;
@@ -25,16 +34,16 @@
     border: 2px solid $grey--dark;
 
     @media (min-width: $tablet) {
-      width: 52px;
-      height: 52px;
+      width: 50px;
+      height: 50px;
     }
   }
 
   &::after {
     content: "";
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background-color: transparent;
 
     top: 12px;
@@ -44,8 +53,8 @@
     @media (min-width: $tablet) {
       top: 15px;
       left: 15px;
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
     }
   }
 

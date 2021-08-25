@@ -14,6 +14,7 @@
   @include reset-list;
 
   @media (min-width: $tablet) {
+    padding-left: 0;
     grid-column: 2 / -1;
   }
 }
@@ -23,6 +24,12 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -23px;
+    margin-left: -22px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: -28px;
   }
 }
 
@@ -31,11 +38,16 @@
 
   @media (min-width: $tablet) {
     margin-bottom: -26px;
+    padding-left: 3px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 1px;
   }
 }
 
 .main-form__item {
-  margin-bottom: 16px;
+  margin-bottom: 21px;
 }
 
 .main-form__group--type .main-form__item {
@@ -47,22 +59,30 @@
 }
 
 .main-form__group--color .main-form__item {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet) {
     width: 50%;
     padding-right: 15px;
+    padding-left: 22px;
   }
 
   @media (min-width: $desktop) {
-    width: 30%;
+    width: 29%;
+    padding-left: 28px;
+  }
+}
+
+.main-form__group--color .main-form__item:nth-child(3n) {
+  @media (min-width: $desktop) {
+    padding-left: 30px;
   }
 }
 
 .main-form__group {
   position: relative;
   border: none;
-  padding: 30px 0 30px 0;
+  padding: 20px 0 33px 0;
   margin: 0;
   width: 100%;
 
@@ -72,7 +92,7 @@
     width: 100%;
     height: 1px;
     background-color: $green--additional;
-    top: -18px;
+    top: -19px;
     right: 0;
 
     @media (min-width: $tablet) {
@@ -85,11 +105,12 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: min-content;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 51px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(6, 1fr);
+    padding-bottom: 49px;
   }
 }
 
@@ -126,8 +147,42 @@
   }
 }
 
+.main-form__group--color {
+  padding-top: 14px;
+  padding-bottom: 11px;
+
+  @media (min-width: $tablet) {
+    padding-top: 50px;
+    padding-bottom: 49px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 48px;
+    padding-bottom: 51px;
+  }
+}
+
+.main-form__group--name {
+  padding-top: 19px;
+  padding-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    padding-top: 50px;
+    padding-bottom: 26px;
+  }
+}
+
 .main-form__group--phone {
   padding-top: 0;
+  padding-bottom: 35px;
+
+  &::before {
+    top: -13px;
+
+    @media (min-width: $tablet) {
+      top: 0;
+    }
+  }
 
   @media (min-width: $tablet) {
     padding-top: 50px;
@@ -137,17 +192,44 @@
 
 .main-form__group--mail {
   padding-top: 0;
+  padding-bottom: 35px;
+
+  &::before {
+    top: -13px;
+
+    @media (min-width: $tablet) {
+      top: 0;
+    }
+  }
 
   @media (min-width: $tablet) {
-    padding-top: 50px;
+    padding-top: 24px;
+    padding-bottom: 50px;
+  }
+}
+
+.main-form__group--wishes {
+  padding-bottom: 11px;
+
+  &::before {
+    top: -11px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 32px;
   }
 }
 
 .main-form__button {
   margin: 0 auto;
   max-width: 350px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 16px 45px;
+  font-size: 17px;
+  line-height: 16px;
 
   @media (min-width: $tablet) {
     margin: 0 0 10px 0;
@@ -166,6 +248,7 @@
   position: relative;
   z-index: 1;
   margin-bottom: 10px;
+  text-transform: uppercase;
 
   @media (max-width: $tablet) {
     &::before {
@@ -190,7 +273,7 @@
   }
 
   @media (min-width: $desktop) {
-    left: 63px;
+    left: 61px;
   }
 }
 
@@ -200,12 +283,13 @@
   display: block;
   text-align: center;
   margin-bottom: 30px;
+  margin-left: -11px;
 
   @media (min-width: $tablet) {
     font-size: 17px;
     line-height: 30px;
     order: 1;
-    margin-bottom: 0 0 10px 0;
+    margin: 0 0 10px 0;
     align-self: center;
   }
 
@@ -226,7 +310,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-right: 28px;
+    margin-right: 24px;
   }
 }
 
@@ -244,19 +328,33 @@
 
 .main-form__label svg {
   position: absolute;
-  top: 0;
-  right: 5px;
+  top: -3px;
+  right: 7px;
   fill: $black--opacity-02;
   pointer-events: none;
 
   @media (min-width: $tablet) {
-    top: 21px;
-    right: 10px;
+    top: 11px;
+    right: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 8px;
   }
 }
 
-.main-form__group--phone .main-form__person {
-  padding-right: 40px;
+.main-form__group--mail svg {
+  top: 1px;
+  right: 3px;
+
+  @media (min-width: $tablet) {
+    top: 16px;
+    right: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 4px;
+  }
 }
 
 .main-form__group--name label {
@@ -270,34 +368,82 @@
 .main-form__group--name .main-form__list {
   @media (min-width: $desktop) {
     grid-column: 2 / -2;
+    padding-left: 2px;
+  }
+}
+
+.main-form__group--name .main-form__item {
+  @media (min-width: $tablet) {
+    margin-bottom: 24px;
   }
 }
 
 .main-form__group--phone .main-form__person,
 .main-form__group--mail .main-form__person {
+  padding-right: 40px;
+
   @media (min-width: $tablet) {
+    padding-right: 60px;
     background-color: $grey--light;
   }
 }
 
 .main-form__group--color .main-form__title {
+  &::before {
+    width: calc(100% + 16px);
+  }
+
   @media (min-width: $tablet) {
-    top: 61px;
+    top: 68px;
   }
 }
 
 .main-form__group--type .main-form__title {
+  &::before {
+    width: calc(100% + 23px);
+  }
+
   @media (min-width: $tablet) {
-    top: 61px;
+    top: 68px;
   }
 }
 
 .main-form__group--name .main-form__title {
-  margin-bottom: 8px;
+  @media (min-width: $tablet) {
+    top: 68px;
+  }
+}
+
+.main-form__group--mail .main-form__title {
+  &::before {
+    width: calc(100% + 20px);
+  }
+
+  margin-bottom: 4px;
 
   @media (min-width: $tablet) {
-    top: 61px;
+    top: 42px;
   }
+}
+
+.main-form__group--wishes .main-form__title {
+  &::before {
+    width: calc(100% + 21px);
+  }
+
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet) {
+    top: 70px;
+  }
+}
+
+.main-form__group--phone .main-form__title {
+  &::before {
+    width: calc(100% + 28px);
+  }
+
+  margin-bottom: 4px;
 }
 
 .main-form__person:not(:disabled):hover + svg,
