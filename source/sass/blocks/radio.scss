@@ -1,0 +1,82 @@
+.radio {
+  position: relative;
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+}
+
+.radio__item {
+  @include font(17px, 18px, 700, $black);
+
+  padding-left: 60px;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  word-break: break-word;
+
+  @media (min-width: $tablet) {
+    padding: 16px 5px 16px 77px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 79px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 2px solid $grey--dark;
+
+    @media (min-width: $tablet) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+
+    top: 12px;
+    left: 12px;
+    border-radius: 50%;
+
+    @media (min-width: $tablet) {
+      top: 15px;
+      left: 15px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 19px;
+  }
+}
+
+.radio__item:hover::before,
+.radio__input:focus + .radio__item::before {
+  border-color: $green--additional;
+}
+
+.radio__item:active::before {
+  border-color: $black--opacity-03;
+}
+
+.radio__input:checked + .radio__item::after {
+  background-color: $green--additional;
+}
+
+.radio__input:disabled + .radio__item {
+  pointer-events: none;
+  opacity: 0.3;
+}

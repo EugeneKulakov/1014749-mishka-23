@@ -1,0 +1,28 @@
+.textarea {
+  @include font(17px, 18px, 400, $grey--dark);
+  border: 2px solid $grey--dark;
+  width: 100%;
+  min-height: 142px;
+  padding: 16px 15px;
+  resize: none;
+
+  &::placeholder {
+    color: $black--opacity-03;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $green--additional;
+    outline: none;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 19px;
+  }
+}
+
+.textarea:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+  border-color: $grey--dark;
+}

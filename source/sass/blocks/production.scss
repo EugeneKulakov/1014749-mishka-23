@@ -1,20 +1,13 @@
 .production {
-  position: relative;
-  width: 260px;
+  @include paddings;
+}
+
+.production__container {
+  border: 1px solid $grey;
+  padding-bottom: 32px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid $grey;
-  padding-bottom: 33px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 23px;
-    left: 31px;
-    width: 32px;
-    height: 22px;
-    background-image: url("../img/video.svg");
-  }
 
   &:hover,
   &:focus {
@@ -24,40 +17,128 @@
   &:active {
     box-shadow: 0 3px 5px $black--opacity-01;
   }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 45px;
+    max-width: none;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop - ($tablet-padding * 2);
+    display: grid;
+    grid-template-columns: 683px 1fr;
+    grid-template-rows: min-content min-content;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .production__title {
   @include font(17px, 24px, 700, $black);
-  margin-bottom: 20px;
-  margin-top: 16px;
-  padding-left: 91px;
+  position: relative;
+  margin-bottom: 26px;
+  margin-top: 22px;
+  padding-left: 90px;
   padding-right: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 33px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 22px;
+    background-image: url("../img/video.svg");
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-left: 106px;
+    margin-top: 42px;
+
+    &::before {
+      transform: translateY(-67%);
+      left: 41px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    padding-left: 78px;
+    padding-right: 50px;
+    padding-top: 96px;
+    margin-top: 0;
+
+    &::before {
+      top: 61px;
+      left: 78px;
+    }
+  }
 }
 
 .production__inner {
-  padding-left: $mobile-padding;
+  padding-left: $mobile-padding + 3px;
   padding-right: $mobile-padding;
+
+  @media (min-width: $tablet) {
+    padding-left: 39px;
+    padding-right: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    padding-left: 78px;
+    padding-right: 57px;
+    padding-bottom: 59px;
+  }
 }
 
 .production__wrap {
   position: relative;
+  background-color: $grey--light;
+  margin-left: -1px;
+  margin-right: -1px;
+
+  @media (min-width: $tablet) {
+    order: -1;
+    margin-top: -1px;
+    margin-left: -1px;
+    border-bottom: 1px solid $grey;
+    margin-bottom: -1px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    width: 683px;
+    margin-bottom: -1px;
+    border: none;
+  }
 }
 
 .production__button {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 101px;
-  height: 77px;
+  width: 103px;
+  height: 78px;
   border: none;
   transform: translate(-50%, -50%);
   background-image: url("../img/play.svg");
-  background-size: 101px 77px;
+  background-size: 103px 78px;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-color: transparent;
   padding: 0;
   cursor: pointer;
+  transition: 0.2s linear;
 
   &:hover,
   &:focus {
@@ -68,20 +149,52 @@
     transform: translate(-50%, -50%) scale(0.8);
     opacity: 0.3;
   }
+
+  @media (min-width: $desktop) {
+    left: calc(50% + 1px);
+    width: 102px;
+    height: 77px;
+    background-size: 102px 77px;
+  }
 }
 
 .production__text {
   @include font(13px, 24px, 400, $grey--dark);
 
-  margin-top: 20px;
-  margin-bottom: 34px;
+  margin-top: 35px;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet) {
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 9px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 52px;
+    margin-top: 11px;
+  }
 }
 
 .production__order {
-  width: 192px;
+  font-size: 18px;
+  margin-right: 3px;
+
+  @media (min-width: $tablet) {
+    font-size: 17px;
+    width: 100%;
+    margin-left: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 1px;
+  }
 }
 
 .production__image {
   display: block;
   background-color: $grey;
+  height: 100%;
+  width: 100%;
 }

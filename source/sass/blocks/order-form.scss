@@ -1,6 +1,32 @@
+.order-form {
+  @include paddings;
+
+  max-width: 100%;
+  overflow: hidden;
+
+  @media (min-width: $tablet) {
+    padding-top: 46px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 100px;
+  }
+}
+
 .order-form__text {
   @include font(13px, 24px, 400, $grey--dark);
+  max-width: $desktop - $tablet-padding * 2;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
 
-  padding-left: $mobile-padding;
-  padding-right: $mobile-padding;
+  @media (min-width: $tablet) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 700px;
+  }
 }

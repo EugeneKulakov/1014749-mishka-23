@@ -3,11 +3,41 @@
 
   margin-top: 0;
   margin-bottom: 30px;
-  padding: 70px $mobile-padding 70px $mobile-padding;
+  padding: 73px $mobile-padding;
   background-color: $grey--light;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 28px;
+    margin-bottom: 79px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 37px;
+    padding-bottom: 93px;
+    margin-bottom: 61px;
+    padding-left: 33px;
+  }
 }
 
 .catalog-main__production {
   margin-bottom: 58px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 105px;
+  }
+}
+
+.catalog-main__catalog {
+  @media (min-width: $desktop) {
+    margin-bottom: 6px;
+  }
 }

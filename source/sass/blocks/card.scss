@@ -1,5 +1,6 @@
 .card {
-  width: 260px;
+  width: 100%;
+  max-width: 560px;
 
   &:hover,
   &:focus {
@@ -9,12 +10,24 @@
   &:active {
     box-shadow: 0 3px 5px $black--opacity-01;
   }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    max-width: none;
+  }
+
+  @media (min-width: $desktop) {
+    width: 316px;
+    min-height: 659px;
+    flex-direction: column;
+  }
 }
 
 .card__link {
   @include font(17px, 24px, 700, $black);
 
   text-decoration: none;
+  word-break: break-word;
 
   &:hover,
   &:focus {
@@ -24,14 +37,36 @@
   &:active {
     color: $black--opacity-03;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
 }
 
 .card__properties {
   @include font(13px, 30px, 400, $grey--dark);
+
+  margin-top: 5px;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet) {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 13px;
+  }
 }
 
 .card__price {
   @include font(15px, 24px, 700, $black);
+
+  @media (min-width: $tablet) {
+    font-size: 17px;
+    margin-bottom: 13px;
+    margin-left: -1px;
+  }
 }
 
 .card__wrap {
@@ -39,23 +74,59 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid $grey;
+  margin-top: auto;
+  padding-top: 7px;
+  padding-bottom: 11px;
+
+  @media (min-width: $desktop) {
+    padding-bottom: 10px;
+  }
 }
 
 .card__info-wrap {
-  padding-right: 28px;
-  padding-left: 28px;
+  padding: 7px 28px 0 28px;
   border: 1px solid $grey;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% + 1px);
+    padding-left: 34px;
+    padding-right: 33px;
+    margin-left: -1px;
+    padding-top: 8px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 316px;
+    padding-left: 27px;
+    padding-right: 30px;
+    flex-grow: 1;
+    margin-left: 0;
+  }
 }
 
 .card__img-link img {
   display: block;
   background-color: $grey;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $desktop) {
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .card__cart {
   position: relative;
-  right: -4px;
+  right: -9px;
   padding: 7px;
+
+  @media (min-width: $desktop) {
+    top: 2px;
+    right: -7px;
+  }
 }
 
 .card__cart svg {
@@ -69,4 +140,24 @@
 
 .card__cart:active svg {
   fill: $green--opacity-03;
+}
+
+.card__title {
+  margin-bottom: 0;
+
+  @media (min-width: $tablet) {
+    padding-right: 25px;
+  }
+}
+
+.card__img-link {
+  display: block;
+
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+  }
 }

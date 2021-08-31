@@ -7,6 +7,10 @@
   position: relative;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media (min-width: $tablet) {
+    padding-left: 28px;
+  }
 }
 
 .social::before {
@@ -15,7 +19,7 @@
   width: 100%;
   height: 1px;
   background-color: $grey--darker;
-  bottom: 0;
+  bottom: 2px;
   left: 0;
 
   @media (min-width: $tablet) {
@@ -42,7 +46,7 @@
   &--twitter {
     width: 23px;
     height: 20px;
-    margin-top: 3px;
+    margin-top: 4px;
   }
 }
 
@@ -61,5 +65,5 @@
 
 .social__item:not(:last-child) {
   margin-right: 21px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
