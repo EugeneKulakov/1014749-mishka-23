@@ -5,6 +5,7 @@ const cardOrderButtons = document.querySelectorAll(".card__cart");
 const header = document.querySelector(".header--without-js");
 const modalOrder = document.querySelector(".modal-order");
 const modalOrderButton = document.querySelector(".modal-order__button");
+const mapContainer = document.getElementById("map");
 
 header && header.classList.remove("header--without-js");
 menu.length && menu.forEach((elem) => elem.classList.add("js-hide"));
@@ -41,4 +42,28 @@ if (modalOrder) {
       modalOrder.classList.add("modal-order--closed");
     }
   });
+}
+
+if (mapContainer) {
+  ymaps.ready(init);
+
+  function init() {
+    (myMap = new ymaps.Map("map", {
+      center: [59.938631, 30.323055],
+      zoom: 16,
+      controls: [],
+    })),
+      (myPlacemark = new ymaps.Placemark(
+        myMap.getCenter(),
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "./img/map/map-pin.svg",
+          iconImageSize: [67, 100],
+          iconImageOffset: [-33, -100],
+        }
+      ));
+
+    myMap.geoObjects.add(myPlacemark);
+  }
 }

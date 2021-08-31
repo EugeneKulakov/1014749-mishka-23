@@ -52,12 +52,32 @@
 
 .contacts__image {
   display: block;
-  margin: 0 auto 42px auto;
   object-fit: cover;
   background-color: $antiquewhite;
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__map-container {
+  position: relative;
+  margin: 0 auto 42px auto;
+  height: 454px;
 
   @media (min-width: $desktop) {
     width: 527px;
+    height: 457px;
+    margin: 0;
+  }
+}
+
+.contacts__map {
+  width: 100%;
+  height: 454px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (min-width: $tablet) {
     height: 457px;
   }
 }
