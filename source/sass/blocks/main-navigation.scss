@@ -188,10 +188,6 @@
   left: 0;
   transform: translateX(-100%);
 
-  @media (min-width: $tablet) {
-    border-color: $grey--additional;
-  }
-
   @media (min-width: $desktop) {
     display: none;
   }
@@ -351,6 +347,7 @@
 .main-navigation--inner .main-navigation__menu--links::before {
   @media (min-width: $tablet) {
     background-color: $grey--light;
+    border-color: $grey--additional;
   }
 
   @media (min-width: $desktop) {
