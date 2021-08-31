@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page-body">
-    <header class="page-body__header header">
+    <header class="page-body__header header header--without-js">
       <nav class="header__navigation main-navigation main-navigation--inner">
         <a class="main-navigation__logo logo" href="index.html">
           <picture>
@@ -27,11 +27,12 @@
           </picture>
         </a>
         <button
-          class="header__toggle toggle toggle--cross"
+          class="header__toggle toggle"
           type="button"
           aria-label="Закрыть меню"
         ></button>
         <ul class="main-navigation__menu main-navigation__menu--links">
+          <!-- js-hide скрывает элемент -->
           <li class="main-navigation__item">
             <a class="main-navigation__link">Каталог товаров</a>
           </li>
@@ -423,5 +424,6 @@
         </form>
       </div>
     </section>
+    <script src="./js/script.js"></script>
   </body>
 </html>
