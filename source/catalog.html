@@ -109,14 +109,24 @@
               <picture>
                 <source
                   media="(min-width: 1050px)"
-                  srcset="./img/goods/hare3.jpg"
+                  srcset="
+                    ./img/goods/hare-desktop@1x.jpg 1x,
+                    ./img/goods/hare-desktop@2x.jpg 2x
+                  "
                 />
                 <source
                   media="(min-width: 480px)"
-                  srcset="./img/goods/hare2.jpg"
+                  srcset="
+                    ./img/goods/hare-tablet@1x.jpg 1x,
+                    ./img/goods/hare-tablet@2x.jpg 2x
+                  "
                 />
                 <img
-                  src="./img/goods/hare.jpg"
+                  src="./img/goods/hare-mobile@1x.jpg 1x"
+                  srcset="
+                    ./img/goods/hare-mobile@1x.jpg 1x,
+                    ./img/goods/hare-mobile@2x.jpg 2x
+                  "
                   alt="Фотография Зайчика-попрыгайчика"
                 />
               </picture>
@@ -144,12 +154,30 @@
           </li>
           <li class="catalog__item card">
             <a class="card__img-link" href="bowl.html">
-              <img
-                width="260"
-                height="195"
-                src="https://via.placeholder.com/260x195"
-                alt="Фотография Корзинки для белья"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1050px)"
+                  srcset="
+                    ./img/goods/basket-desktop@1x.jpg 1x,
+                    ./img/goods/basket-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./img/goods/basket-tablet@1x.jpg 1x,
+                    ./img/goods/basket-tablet@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./img/goods/basket-mobile@1x.jpg 1x"
+                  srcset="
+                    ./img/goods/basket-mobile@1x.jpg 1x,
+                    ./img/goods/basket-mobile@2x.jpg 2x
+                  "
+                  alt="Фотография Корзинки для белья"
+                />
+              </picture>
             </a>
             <div class="card__info-wrap">
               <h3 class="card__title">
@@ -174,12 +202,30 @@
           </li>
           <li class="catalog__item card">
             <a class="card__img-link" href="toys.html">
-              <img
-                width="260"
-                height="195"
-                src="https://via.placeholder.com/260x195"
-                alt="Фотография большой Корзинки для игрушек"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1050px)"
+                  srcset="
+                    ./img/goods/toys-desktop@1x.jpg 1x,
+                    ./img/goods/toys-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./img/goods/toys-tablet@1x.jpg 1x,
+                    ./img/goods/toys-tablet@2x.jpg 2x
+                  "
+                />
+                <img
+                  src="./img/goods/toys-mobile@1x.jpg 1x"
+                  srcset="
+                    ./img/goods/toys-mobile@1x.jpg 1x,
+                    ./img/goods/toys-mobile@2x.jpg 2x
+                  "
+                  alt="Фотография большой Корзинки для игрушек"
+                />
+              </picture>
             </a>
             <div class="card__info-wrap">
               <h3 class="card__title">
@@ -213,15 +259,25 @@
             <picture>
               <source
                 media="(min-width: 1150px)"
-                srcset="./img/player/img3.jpg"
+                srcset="
+                  ./img/player/video-desktop@1x.jpg 1x,
+                  ./img/player/video-desktop@2x.jpg 2x
+                "
               />
               <source
                 media="(min-width: 700px)"
-                srcset="./img/player/img2.jpg"
+                srcset="
+                  ./img/player/video-tablet@1x.jpg 1x,
+                  ./img/player/video-tablet@2x.jpg 2x
+                "
               />
               <img
                 class="production__image"
-                src="./img/player/img1.jpg"
+                src="./img/player/video-mobile@1x.jpg"
+                srcset="
+                  ./img/player/video-mobile@1x.jpg 1x,
+                  ./img/player/video-mobile@2x.jpg 2x
+                "
                 alt="Процесс производства наших товаров"
               />
             </picture>
