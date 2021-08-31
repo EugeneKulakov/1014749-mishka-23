@@ -14,15 +14,11 @@
   }
 }
 
-.logo__image {
-  fill: $black;
-}
-
 .logo[href]:hover .logo__image,
 .logo[href]:focus .logo__image {
-  fill: $black--opacity-06;
+  opacity: 0.6;
 }
 
 .logo[href]:active .logo__image {
-  fill: $black--opacity-03;
+  opacity: 0.3;
 }
