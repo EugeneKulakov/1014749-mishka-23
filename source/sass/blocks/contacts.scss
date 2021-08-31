@@ -1,7 +1,14 @@
 .contacts {
   @include font(14px, 30px, 400, $grey--dark);
 
-  padding-top: 10px;
+  padding-top: 17px;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/flag.svg");
+    background-repeat: no-repeat;
+    background-position: right 53px top 30px;
+    background-size: 47px 81px;
+  }
 
   @media (min-width: $desktop) {
     display: flex;
@@ -10,6 +17,7 @@
     margin: 0 auto;
     padding-left: $tablet-padding;
     padding-right: $tablet-padding;
+    background-position: left 113px top 79px;
   }
 }
 
@@ -20,10 +28,11 @@
 
   @include paddings;
 
-  margin: 0 auto 50px auto;
+  margin: 0 auto 32px auto;
 
   @media (min-width: $tablet) {
     max-width: $tablet + 100px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: $desktop) {
@@ -63,6 +72,10 @@
   margin: 0 auto 42px auto;
   height: 454px;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 58px;
+  }
+
   @media (min-width: $desktop) {
     width: 527px;
     height: 457px;
@@ -87,26 +100,33 @@
 
   width: 100%;
   word-break: break-word;
+  margin-bottom: 28px;
+  margin-left: -1px;
 
   @media (min-width: $tablet) {
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 35px;
+    margin-bottom: 49px;
+    margin-left: 0;
   }
 
   @media (min-width: $desktop) {
     font-size: 53px;
     line-height: 57px;
+    margin-top: 79px;
+    margin-left: -1px;
+    margin-bottom: 35px;
   }
 }
 
 .contacts__email,
 .contacts__text {
   width: 77px;
-  margin: 0 0 10px 0;
+  margin: 0 1px 10px -1px;
 
   @media (min-width: $tablet) {
     font-size: 17px;
+    margin-left: 0;
   }
 }
 
@@ -135,11 +155,19 @@
   &::before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: calc(100% - 1px);
     height: 1px;
-    bottom: 0;
-    left: 0;
+    bottom: 3px;
+    left: 1px;
     background-color: $green;
+
+    @media (min-width: $tablet) {
+      bottom: 0;
+    }
+
+    @media (min-width: $desktop) {
+      bottom: -5px;
+    }
   }
 
   &:hover,
@@ -162,12 +190,16 @@
   width: 100%;
   display: flex;
   align-items: flex-start;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet) {
     width: 50%;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
     width: 100%;
+    margin-bottom: 20px;
+    margin-left: -1px;
   }
 }
