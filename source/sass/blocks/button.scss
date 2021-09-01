@@ -9,6 +9,7 @@
   padding: 14px;
   cursor: pointer;
   background-color: transparent;
+  transition: all 0.2s linear;
 
   &:hover,
   &:focus {
@@ -22,5 +23,8 @@
 
   @media (min-width: $tablet) {
     font-size: 17px;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    padding-left: 13px;
   }
 }

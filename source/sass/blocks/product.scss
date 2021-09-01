@@ -88,7 +88,7 @@
     grid-column: 1 / 2;
     align-self: center;
     justify-content: center;
-    padding-left: 22px;
+    padding-left: 23px;
     padding-right: 35px;
     padding-top: 34px;
   }
@@ -145,6 +145,7 @@
   @media (min-width: $desktop) {
     grid-column: 2 / 4;
     padding-bottom: 11px;
+    padding-left: 73px;
   }
 }
 
@@ -181,10 +182,10 @@
 }
 
 .product__properties td:first-child {
-  width: 38%;
+  width: 37.6%;
 
   @media (min-width: $tablet) {
-    width: 33%;
+    width: 33.2%;
   }
 
   @media (min-width: $desktop) {
