@@ -86,7 +86,7 @@
   display: block;
   text-decoration: none;
   padding: 24px 52% 36px 30px;
-  margin-bottom: -5px;
+  transform: translateY(5px);
   height: 100%;
   transition: all 0.15s linear;
 
@@ -193,5 +193,7 @@
 
 .promo__link:hover,
 .promo__link:focus {
-  transform: translateY(-5px);
+  @media (min-width: $tablet) {
+    transform: translateY(-5px);
+  }
 }
