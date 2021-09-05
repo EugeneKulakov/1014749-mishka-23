@@ -10,8 +10,7 @@
   padding-bottom: 51px;
 
   @media (min-width: $tablet) {
-    background-image: url("../img/zigzag-line-desktop.svg"),
-      url("../img/review@1x.jpg");
+    background-image: url("../img/zigzag-line.svg"), url("../img/review@1x.jpg");
     background-repeat: repeat-x, no-repeat;
     background-size: auto 17px, 350px 457px;
     background-position: -4px bottom, left top;
@@ -203,7 +202,7 @@
 
   @media (min-width: $desktop) {
     padding-left: 174px;
-    background-image: url("../img/zigzag-line-desktop.svg");
+    background-image: url("../img/zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: auto 23px;
     background-position: 0 bottom;

@@ -8,7 +8,7 @@
   @include paddings;
 
   @media (min-width: $tablet) {
-    background-image: url("../img/zigzag-line-desktop.svg");
+    background-image: url("../img/zigzag-line.svg");
     background-size: auto 17px;
     padding-bottom: 69px;
     background-position: -2px bottom;
@@ -34,7 +34,7 @@
     max-width: $desktop - $tablet-padding * 2;
     padding-bottom: 96px;
     grid-template-columns: 175px repeat(5, 1fr);
-    background-image: url("../img/zigzag-line-desktop.svg");
+    background-image: url("../img/zigzag-line.svg");
     background-repeat: repeat-x;
     background-position: 0 bottom;
     background-size: 1050px 23px;

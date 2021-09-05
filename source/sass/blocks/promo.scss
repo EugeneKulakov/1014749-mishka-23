@@ -59,7 +59,7 @@
 
   @media (min-width: $tablet) {
     @include font(43px, 50px, 700, $black);
-    margin-bottom: 371px;
+    margin-bottom: 366px;
     max-width: 600px;
   }
 
@@ -67,7 +67,7 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 355px;
+    margin-bottom: 350px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -85,8 +85,7 @@
   position: relative;
   display: block;
   text-decoration: none;
-  padding: 24px 52% 36px 30px;
-  transform: translateY(5px);
+  padding: 24px 52% 31px 30px;
   height: 100%;
   transition: all 0.15s linear;
 
@@ -112,6 +111,7 @@
   }
 
   @media (min-width: $tablet) {
+    transform: translateY(5px);
     font-size: 20px;
     line-height: 30px;
     padding: 26px 52% 50px 36px;
@@ -134,7 +134,7 @@
 .promo__link--interior::after {
   background-image: url("../img/interior.svg");
   background-size: 40px 62px;
-  background-position: right 13% top 50%;
+  background-position: right 13% top 54%;
 
   @media (min-width: $tablet) {
     background-position: right 12.5% top 30px;
@@ -148,7 +148,7 @@
 .promo__link--toys::after {
   background-image: url("../img/toys.svg");
   background-size: 60px 60px;
-  background-position: right 10.2% top 43%;
+  background-position: right 10.2% top 48%;
 
   @media (min-width: $tablet) {
     background-position: right 12.5% top 31px;
