@@ -88,12 +88,12 @@
   }
 }
 
-.modal-order__input:checked + .modal-order__radio {
-  border-color: $green;
-}
-
 .modal-order__input:focus + .modal-order__radio {
   border-color: rgba($grey--dark, 0.3);
+}
+
+.modal-order__input:checked + .modal-order__radio {
+  border-color: $green;
 }
 
 .modal-order__button {

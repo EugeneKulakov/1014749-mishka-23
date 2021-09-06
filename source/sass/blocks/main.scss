@@ -11,17 +11,43 @@
 }
 
 .main__promo {
-  margin-bottom: 33px;
+  margin-bottom: 31px;
 
-  @media (min-width: $tablet) {
-    margin-bottom: 60px;
+  @media (min-width: $desktop) {
+    margin-bottom: 54px;
   }
 }
 
 .main__about {
-  margin-bottom: 33px;
+  margin-bottom: 57px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 60px;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.main__product {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.main__reviews {
+  @media (min-width: $tablet) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 44px;
   }
 }

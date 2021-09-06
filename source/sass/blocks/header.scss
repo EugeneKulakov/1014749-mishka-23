@@ -4,10 +4,10 @@
   border-top: 1px solid $grey;
   border-bottom: 1px solid $grey;
   max-width: 100%;
-  overflow: hidden;
 
   @media (min-width: $tablet) {
     border: none;
+    overflow: hidden;
   }
 }
 
@@ -22,10 +22,19 @@
 }
 
 .header__navigation {
-  position: static;
+  position: absolute;
+  width: 100%;
   z-index: 2;
 
   @media (min-width: $tablet) {
     position: static;
   }
+}
+
+.header--without-js .header__navigation {
+  position: static;
+}
+
+.header--without-js .header__toggle {
+  display: none;
 }

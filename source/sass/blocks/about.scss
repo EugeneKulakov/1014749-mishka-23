@@ -23,6 +23,7 @@
   @media (min-width: $desktop) {
     font-size: 53px;
     line-height: 57px;
+    margin-bottom: 33px;
   }
 }
 
@@ -41,57 +42,80 @@
 
   padding-top: 62px;
   background-repeat: no-repeat;
-  padding-right: 15px;
+  padding-right: 10px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 22px;
     width: 50%;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 30px;
   }
 }
 
 .about__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 49px;
+  }
 }
 
 .about__item--eco {
   background-image: url("../img/icon-eco.svg");
   background-size: 33px 38px;
-  background-position: 5px 1px;
+  background-position: 8px 7px;
   order: 1;
+
+  @media (min-width: $tablet) {
+    background-position: 8px 6px;
+  }
 }
 
 .about__item--scandinavian {
   background-image: url("../img/icon-style.svg");
   background-size: 47px 27px;
-  background-position: 5px 1px;
+  background-position: 0 8px;
   order: 3;
+
+  @media (min-width: $tablet) {
+    background-position: 1px 8px;
+  }
 }
 
 .about__item--likes {
   background-image: url("../img/icon-like.svg");
   background-size: 34px 27px;
-  background-position: 5px 1px;
+  background-position: 7px 13px;
   order: 5;
+
+  @media (min-width: $tablet) {
+    background-position: 8px 13px;
+  }
 }
 
 .about__item--handmade {
   background-image: url("../img/icon-handmade.svg");
   background-size: 35px 34px;
-  background-position: 5px 1px;
+  background-position: 3px 10px;
   order: 2;
 }
 
 .about__item--support {
   background-image: url("../img/icon-support.svg");
   background-size: 55px 23px;
-  background-position: 5px 1px;
+  background-position: -2px 11px;
   order: 4;
+  margin-left: -4px;
+  padding-left: 4px;
 }
 
 .about__item--giftbox {
   background-image: url("../img/icon-giftbox.svg");
   background-size: 33px 32px;
-  background-position: 5px 1px;
+  background-position: 3px 9px;
   order: 6;
 }
