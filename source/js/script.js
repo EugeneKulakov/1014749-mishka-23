@@ -32,6 +32,7 @@ if (modalOrder) {
     evt.preventDefault();
     modalOrder.classList.remove("modal-order--closed");
     window.addEventListener("keydown", x);
+    document.querySelector(".modal-order__input").focus();
   };
 
   const closeModal = (evt) => {
