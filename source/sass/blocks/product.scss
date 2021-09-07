@@ -225,6 +225,7 @@
   display: block;
   background-color: $grey;
   margin: 0 auto;
+  object-fit: contain;
 
   @media (min-width: $tablet) {
     margin: 12px 0 0 0;

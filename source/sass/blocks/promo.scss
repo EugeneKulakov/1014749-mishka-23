@@ -175,6 +175,7 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: $grey;
+  object-fit: contain;
 
   @media (min-width: $tablet) {
     bottom: 12px;
