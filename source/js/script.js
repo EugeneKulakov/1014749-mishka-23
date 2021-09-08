@@ -7,6 +7,10 @@ const modalOrder = document.querySelector(".modal-order");
 const modalOrderButton = document.querySelector(".modal-order__button");
 const mapContainer = document.getElementById("map");
 
+const Key = {
+  ESCAPE: 27,
+};
+
 header && header.classList.remove("header--without-js");
 menu.length && menu.forEach((elem) => elem.classList.add("js-hide"));
 
@@ -18,28 +22,35 @@ toggle &&
   });
 
 if (modalOrder) {
-  modalOrderButton.addEventListener("click", (evt) => {
+  const x = (evt) => {
+    if (evt.keyCode === Key.ESCAPE) {
+      closeModal(evt);
+    }
+  };
+
+  const openModal = (evt) => {
+    evt.preventDefault();
+    modalOrder.classList.remove("modal-order--closed");
+    window.addEventListener("keydown", x);
+    document.querySelector(".modal-order__input").focus();
+  };
+
+  const closeModal = (evt) => {
     evt.preventDefault();
     modalOrder.classList.add("modal-order--closed");
-  });
+    window.removeEventListener("keydown", x);
+  };
 
-  orderButton &&
-    orderButton.addEventListener("click", (evt) => {
-      evt.preventDefault();
-      modalOrder.classList.remove("modal-order--closed");
-    });
+  modalOrderButton.addEventListener("click", closeModal);
+
+  orderButton && orderButton.addEventListener("click", openModal);
 
   cardOrderButtons.length &&
-    cardOrderButtons.forEach((btn) => {
-      btn.addEventListener("click", (evt) => {
-        evt.preventDefault();
-        modalOrder.classList.remove("modal-order--closed");
-      });
-    });
+    cardOrderButtons.forEach((btn) => btn.addEventListener("click", openModal));
 
   modalOrder.addEventListener("click", (evt) => {
     if (evt.target.classList.contains("modal")) {
-      modalOrder.classList.add("modal-order--closed");
+      closeModal(evt);
     }
   });
 }

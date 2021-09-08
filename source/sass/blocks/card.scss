@@ -152,6 +152,7 @@
 
 .card__img-link {
   display: block;
+  object-fit: contain;
 
   @media (min-width: $tablet) {
     width: 50%;
