@@ -59,12 +59,13 @@
 }
 
 .main-form__group--color .main-form__item {
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet) {
     width: 50%;
     padding-right: 15px;
     padding-left: 22px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: $desktop) {
@@ -110,7 +111,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(6, 1fr);
-    padding-bottom: 49px;
+    padding-bottom: 50px;
   }
 }
 
@@ -394,7 +395,7 @@
   }
 
   @media (min-width: $tablet) {
-    top: 68px;
+    top: 67px;
   }
 }
 
