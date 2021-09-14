@@ -13,13 +13,23 @@
     font-size: 43px;
     line-height: 50px;
     padding-top: 28px;
+    padding-bottom: 85px;
+    margin-bottom: 38px;
+    background-image: url("../img/zigzag-fill-tablet.svg");
+    background-size: auto 24px;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
   }
 
   @media (min-width: $desktop) {
     font-size: 53px;
     line-height: 57px;
-    padding-top: 38px;
-    padding-bottom: 92px;
+    padding-top: 37px;
+    padding-bottom: 111px;
+    margin-bottom: 84px;
+    background-image: url("../img/zigzag-fill-desktop.svg");
+    background-size: 1150px 34px;
+    background-position: left 0 bottom -2px;
   }
 }
 
